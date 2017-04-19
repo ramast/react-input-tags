@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SuggestionListDefault } from '../implementation/SuggestionListDefault.jsx';
+import { SuggestionListDefault } from '../implementation/SuggestionListDefault';
 
 export const SuggestionList = ({
   SuggestionListImplementation,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SuggestionsLoaderDefault } from '../implementation/SuggestionsLoaderDefault.jsx';
+import { SuggestionsLoaderDefault } from '../implementation/SuggestionsLoaderDefault';
 
 export const SuggestionsLoader = ({
   SuggestionsLoaderImplementation,

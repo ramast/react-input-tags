@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InputTagsContainerDefault } from '../implementation/InputTagsContainerDefault.jsx';
+import { InputTagsContainerDefault } from '../implementation/InputTagsContainerDefault';
 
 export const InputTagsContainer = ({
   InputTagsContainerImplementation,

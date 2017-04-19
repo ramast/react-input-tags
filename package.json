@@ -2,7 +2,7 @@
   "name": "react-input-tags",
   "version": "2.3.0",
   "description": "React component for inputting tags",
-  "main": "dist/react-input-tags.js",
+  "main": "lib/index.js",
   "scripts": {
     "server": "start-storybook -p 9001 -c .storybook",
     "web": "open http://localhost:9001/",
@@ -16,7 +16,7 @@
     "remove-dir": "rm -rf dist",
     "create-dir": "mkdir -p dist",
     "build": "npm run build-lib",
-    "build-lib": "browserify -s InputTags -t babelify src/index.js -o dist/react-input-tags.js",
+    "build-lib": "babel src --out-dir lib",
     "build-docs": "build-storybook -c .storybook -o docs",
     "predeploy": "npm run build",
     "deploy": "npm publish && git push --follow-tags"
