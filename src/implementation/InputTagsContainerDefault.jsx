@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputTags } from '../interface/InputTags.jsx';
+import { InputTags } from '../interface/InputTags';
 
 export const handleInsertDefault = (currentTags, insertTagIndex, newTag) =>
   [

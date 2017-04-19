@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InputDefault } from '../implementation/InputDefault.jsx';
+import { InputDefault } from '../implementation/InputDefault';
 
 export const Input = ({
   InputImplementation,

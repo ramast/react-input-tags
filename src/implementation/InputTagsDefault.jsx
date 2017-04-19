@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Input } from '../interface/Input.jsx';
-import { Tag } from '../interface/Tag.jsx';
-import { SuggestionList } from '../interface/SuggestionList.jsx';
-import { SuggestionsLoader } from '../interface/SuggestionsLoader.jsx';
+import { Input } from '../interface/Input';
+import { Tag } from '../interface/Tag';
+import { SuggestionList } from '../interface/SuggestionList';
+import { SuggestionsLoader } from '../interface/SuggestionsLoader';
 import { focusElement, selectElement, defaultClassNamePrefix } from './util';
 
 import {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TagDefault } from '../implementation/TagDefault.jsx';
+import { TagDefault } from '../implementation/TagDefault';
 
 export const Tag = ({
   TagImplementation,

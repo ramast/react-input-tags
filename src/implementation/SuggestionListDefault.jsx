@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Suggestion } from '../interface/Suggestion.jsx';
+import { Suggestion } from '../interface/Suggestion';
 import { defaultClassNamePrefix } from './util';
 
 export const SuggestionListClassNameDefault = `${defaultClassNamePrefix}-suggestion-list`;
