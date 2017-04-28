@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { InputTags } from '../interface/InputTags';
 
 export const handleInsertDefault = (currentTags, insertTagIndex, newTag) =>
@@ -16,10 +17,10 @@ export const handleRemoveDefault = (currentTags, removeTagIndex) =>
 
 export class InputTagsContainerDefault extends React.Component {
   static propTypes = {
-    tags: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
-    handleUpdateTags: React.PropTypes.func.isRequired,
-    handleInsertTag: React.PropTypes.func,
-    handleRemoveTag: React.PropTypes.func,
+    tags: PropTypes.arrayOf(PropTypes.any).isRequired,
+    handleUpdateTags: PropTypes.func.isRequired,
+    handleInsertTag: PropTypes.func,
+    handleRemoveTag: PropTypes.func,
   }
 
   static defaultProps = {

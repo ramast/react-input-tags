@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { InputTagsContainer } from '../index';
 
 const suggestionsLocalDefault = ['apple', 'banana', 'cherry'];
 
 export class RemoteSuggestionsExample extends React.Component {
   static propTypes = {
-    suggestions: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
+    suggestions: PropTypes.arrayOf(PropTypes.any).isRequired,
   }
 
   static defaultProps = {

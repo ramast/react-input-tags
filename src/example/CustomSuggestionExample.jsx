@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { InputTagsContainer } from '../index';
 
 const AvatarSuggestion = ({ value, isHighlighted, handleHighlight, handleSelect }) => (
@@ -16,10 +17,10 @@ const AvatarSuggestion = ({ value, isHighlighted, handleHighlight, handleSelect 
   );
 
 AvatarSuggestion.propTypes = {
-  value: React.PropTypes.object.isRequired,
-  isHighlighted: React.PropTypes.bool.isRequired,
-  handleHighlight: React.PropTypes.func.isRequired,
-  handleSelect: React.PropTypes.func.isRequired,
+  value: PropTypes.object.isRequired,
+  isHighlighted: PropTypes.bool.isRequired,
+  handleHighlight: PropTypes.func.isRequired,
+  handleSelect: PropTypes.func.isRequired,
 };
 
 const suggestionsLocal = [
@@ -33,8 +34,8 @@ const getSuggestionValueObject = suggestion => suggestion.name;
 
 export class CustomSuggestionExample extends React.Component {
   static propTypes = {
-    suggestions: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
-    getSuggestionValue: React.PropTypes.func.isRequired,
+    suggestions: PropTypes.arrayOf(PropTypes.any).isRequired,
+    getSuggestionValue: PropTypes.func.isRequired,
   }
 
   static defaultProps = {

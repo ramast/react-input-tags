@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Input } from '../interface/Input';
 import { Tag } from '../interface/Tag';
@@ -39,12 +40,12 @@ export const SuggestionListContainer = ({
 };
 
 SuggestionListContainer.propTypes = {
-  showSuggestions: React.PropTypes.bool.isRequired,
-  suggestions: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
-  highlightedSuggestionIndex: React.PropTypes.number.isRequired,
-  handleHighlight: React.PropTypes.func.isRequired,
-  handleSelect: React.PropTypes.func.isRequired,
-  getSuggestionValue: React.PropTypes.func.isRequired,
+  showSuggestions: PropTypes.bool.isRequired,
+  suggestions: PropTypes.arrayOf(PropTypes.any).isRequired,
+  highlightedSuggestionIndex: PropTypes.number.isRequired,
+  handleHighlight: PropTypes.func.isRequired,
+  handleSelect: PropTypes.func.isRequired,
+  getSuggestionValue: PropTypes.func.isRequired,
 };
 
 export const getTagValueDefault = tag => tag;
@@ -103,27 +104,27 @@ export const INPUT_MAX_WIDTH = 9999;
 
 export class InputTagsDefault extends React.Component {
   static propTypes = {
-    tags: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
-    handleInsert: React.PropTypes.func.isRequired,
-    handleRemove: React.PropTypes.func.isRequired,
-    getTagValue: React.PropTypes.func,
-    createTag: React.PropTypes.func,
-    suggestions: React.PropTypes.arrayOf(React.PropTypes.any),
-    handleUpdateSuggestions: React.PropTypes.func,
-    getSuggestionValue: React.PropTypes.func,
-    InputTagsClassName: React.PropTypes.string,
-    inputMaxWidth: React.PropTypes.number,
-    mirrorStyles: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    inputWidthExtra: React.PropTypes.number.isRequired,
-    focusElement: React.PropTypes.func.isRequired,
-    selectElement: React.PropTypes.func.isRequired,
-    calcNextIndex: React.PropTypes.func.isRequired,
-    calcPreviousIndex: React.PropTypes.func.isRequired,
-    insertKeyCodes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    removeKeyCodes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    nextKeyCodes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    previousKeyCodes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    closeKeyCodes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.any).isRequired,
+    handleInsert: PropTypes.func.isRequired,
+    handleRemove: PropTypes.func.isRequired,
+    getTagValue: PropTypes.func,
+    createTag: PropTypes.func,
+    suggestions: PropTypes.arrayOf(PropTypes.any),
+    handleUpdateSuggestions: PropTypes.func,
+    getSuggestionValue: PropTypes.func,
+    InputTagsClassName: PropTypes.string,
+    inputMaxWidth: PropTypes.number,
+    mirrorStyles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    inputWidthExtra: PropTypes.number.isRequired,
+    focusElement: PropTypes.func.isRequired,
+    selectElement: PropTypes.func.isRequired,
+    calcNextIndex: PropTypes.func.isRequired,
+    calcPreviousIndex: PropTypes.func.isRequired,
+    insertKeyCodes: PropTypes.arrayOf(PropTypes.number).isRequired,
+    removeKeyCodes: PropTypes.arrayOf(PropTypes.number).isRequired,
+    nextKeyCodes: PropTypes.arrayOf(PropTypes.number).isRequired,
+    previousKeyCodes: PropTypes.arrayOf(PropTypes.number).isRequired,
+    closeKeyCodes: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   static defaultProps = {

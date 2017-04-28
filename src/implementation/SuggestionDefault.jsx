@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { defaultClassNamePrefix } from './util';
 
@@ -7,11 +8,11 @@ export const SuggestionClassNameDefault = `${defaultClassNamePrefix}-suggestion`
 /* eslint-disable react/prefer-stateless-function */
 export class SuggestionDefault extends React.Component {
   static propTypes = {
-    value: React.PropTypes.any.isRequired,
-    isHighlighted: React.PropTypes.bool.isRequired,
-    handleHighlight: React.PropTypes.func.isRequired,
-    handleSelect: React.PropTypes.func.isRequired,
-    SuggestionClassName: React.PropTypes.string,
+    value: PropTypes.any.isRequired,
+    isHighlighted: PropTypes.bool.isRequired,
+    handleHighlight: PropTypes.func.isRequired,
+    handleSelect: PropTypes.func.isRequired,
+    SuggestionClassName: PropTypes.string,
   }
 
   static defaultProps = {

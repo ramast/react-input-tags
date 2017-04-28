@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { InputTagsContainer } from '../index';
 
 const reverseString = string =>
@@ -18,8 +19,8 @@ const ReverseTag = ({ value, handleRemove }) => (
   );
 
 ReverseTag.propTypes = {
-  value: React.PropTypes.string.isRequired,
-  handleRemove: React.PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  handleRemove: PropTypes.func.isRequired,
 };
 
 export class CustomTagExample extends React.Component {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { TagDefault } from '../implementation/TagDefault';
 
@@ -17,10 +18,10 @@ export const Tag = ({
   />;
 
 Tag.propTypes = {
-  TagImplementation: React.PropTypes.func.isRequired,
-  value: React.PropTypes.any.isRequired,
-  handleEdit: React.PropTypes.func.isRequired,
-  handleRemove: React.PropTypes.func.isRequired,
+  TagImplementation: PropTypes.func.isRequired,
+  value: PropTypes.any.isRequired,
+  handleEdit: PropTypes.func.isRequired,
+  handleRemove: PropTypes.func.isRequired,
 };
 
 Tag.defaultProps = {

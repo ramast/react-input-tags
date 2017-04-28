@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { InputTagsContainer } from '../index';
 
 const NameTag = ({ value, handleEdit, handleRemove, TagClassName }) => (
@@ -19,10 +20,10 @@ const NameTag = ({ value, handleEdit, handleRemove, TagClassName }) => (
 );
 
 NameTag.propTypes = {
-  value: React.PropTypes.object.isRequired,
-  handleEdit: React.PropTypes.func.isRequired,
-  handleRemove: React.PropTypes.func.isRequired,
-  TagClassName: React.PropTypes.string,
+  value: PropTypes.object.isRequired,
+  handleEdit: PropTypes.func.isRequired,
+  handleRemove: PropTypes.func.isRequired,
+  TagClassName: PropTypes.string,
 };
 
 const AvatarSuggestion = ({ value, isHighlighted, handleHighlight, handleSelect }) => (
@@ -40,10 +41,10 @@ const AvatarSuggestion = ({ value, isHighlighted, handleHighlight, handleSelect 
   );
 
 AvatarSuggestion.propTypes = {
-  value: React.PropTypes.object.isRequired,
-  isHighlighted: React.PropTypes.bool.isRequired,
-  handleHighlight: React.PropTypes.func.isRequired,
-  handleSelect: React.PropTypes.func.isRequired,
+  value: PropTypes.object.isRequired,
+  isHighlighted: PropTypes.bool.isRequired,
+  handleHighlight: PropTypes.func.isRequired,
+  handleSelect: PropTypes.func.isRequired,
 };
 
 const suggestionsLocal = [
@@ -59,9 +60,9 @@ const createTagObject = inputValue => ({ address: inputValue });
 
 export class CustomTagSuggestionExample extends React.Component {
   static propTypes = {
-    getTagValue: React.PropTypes.func.isRequired,
-    createTag: React.PropTypes.func.isRequired,
-    suggestions: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
+    getTagValue: PropTypes.func.isRequired,
+    createTag: PropTypes.func.isRequired,
+    suggestions: PropTypes.arrayOf(PropTypes.any).isRequired,
   }
 
   static defaultProps = {
