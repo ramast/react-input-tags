@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { InputTagsContainerDefault } from '../implementation/InputTagsContainerDefault';
 
@@ -15,9 +16,9 @@ export const InputTagsContainer = ({
   />;
 
 InputTagsContainer.propTypes = {
-  InputTagsContainerImplementation: React.PropTypes.func.isRequired,
-  tags: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
-  handleUpdateTags: React.PropTypes.func.isRequired,
+  InputTagsContainerImplementation: PropTypes.func.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.any).isRequired,
+  handleUpdateTags: PropTypes.func.isRequired,
 };
 
 InputTagsContainer.defaultProps = {

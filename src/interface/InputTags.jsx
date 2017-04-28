@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { InputTagsDefault } from '../implementation/InputTagsDefault';
 
@@ -17,10 +18,10 @@ export const InputTags = ({
   />;
 
 InputTags.propTypes = {
-  InputTagsImplementation: React.PropTypes.func.isRequired,
-  tags: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
-  handleInsert: React.PropTypes.func.isRequired,
-  handleRemove: React.PropTypes.func.isRequired,
+  InputTagsImplementation: PropTypes.func.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.any).isRequired,
+  handleInsert: PropTypes.func.isRequired,
+  handleRemove: PropTypes.func.isRequired,
 };
 
 InputTags.defaultProps = {

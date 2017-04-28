@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { defaultClassNamePrefix, noop } from './util';
 
@@ -10,19 +11,19 @@ export const handleEditDefault = noop;
 
 export class InputDefault extends React.Component {
   static propTypes = {
-    value: React.PropTypes.string.isRequired,
-    handleOnChange: React.PropTypes.func.isRequired,
-    handleOnBlur: React.PropTypes.func.isRequired,
-    handleOnKeyDown: React.PropTypes.func.isRequired,
-    InputClassName: React.PropTypes.string,
-    inputPlaceholder: React.PropTypes.string,
-    inputTabIndex: React.PropTypes.number,
-    inputRef: React.PropTypes.func,
-    mirrorRef: React.PropTypes.func,
-    mirrorInputStyle: React.PropTypes.func,
-    updateInputWidth: React.PropTypes.func,
-    inputIsEditing: React.PropTypes.bool,
-    handleEdit: React.PropTypes.func,
+    value: PropTypes.string.isRequired,
+    handleOnChange: PropTypes.func.isRequired,
+    handleOnBlur: PropTypes.func.isRequired,
+    handleOnKeyDown: PropTypes.func.isRequired,
+    InputClassName: PropTypes.string,
+    inputPlaceholder: PropTypes.string,
+    inputTabIndex: PropTypes.number,
+    inputRef: PropTypes.func,
+    mirrorRef: PropTypes.func,
+    mirrorInputStyle: PropTypes.func,
+    updateInputWidth: PropTypes.func,
+    inputIsEditing: PropTypes.bool,
+    handleEdit: PropTypes.func,
   }
 
   static defaultProps = {

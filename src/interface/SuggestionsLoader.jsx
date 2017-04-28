@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { SuggestionsLoaderDefault } from '../implementation/SuggestionsLoaderDefault';
 
@@ -11,7 +12,7 @@ export const SuggestionsLoader = ({
   />;
 
 SuggestionsLoader.propTypes = {
-  SuggestionsLoaderImplementation: React.PropTypes.func.isRequired,
+  SuggestionsLoaderImplementation: PropTypes.func.isRequired,
 };
 
 SuggestionsLoader.defaultProps = {

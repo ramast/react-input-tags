@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { InputDefault } from '../implementation/InputDefault';
 
@@ -19,11 +20,11 @@ export const Input = ({
   />;
 
 Input.propTypes = {
-  InputImplementation: React.PropTypes.func.isRequired,
-  value: React.PropTypes.string.isRequired,
-  handleOnChange: React.PropTypes.func.isRequired,
-  handleOnBlur: React.PropTypes.func.isRequired,
-  handleOnKeyDown: React.PropTypes.func.isRequired,
+  InputImplementation: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  handleOnChange: PropTypes.func.isRequired,
+  handleOnBlur: PropTypes.func.isRequired,
+  handleOnKeyDown: PropTypes.func.isRequired,
 };
 
 Input.defaultProps = {

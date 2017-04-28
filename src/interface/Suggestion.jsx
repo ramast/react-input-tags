@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { SuggestionDefault } from '../implementation/SuggestionDefault';
 
@@ -19,11 +20,11 @@ export const Suggestion = ({
   />;
 
 Suggestion.propTypes = {
-  SuggestionImplementation: React.PropTypes.func.isRequired,
-  value: React.PropTypes.any.isRequired,
-  isHighlighted: React.PropTypes.bool.isRequired,
-  handleHighlight: React.PropTypes.func.isRequired,
-  handleSelect: React.PropTypes.func.isRequired,
+  SuggestionImplementation: PropTypes.func.isRequired,
+  value: PropTypes.any.isRequired,
+  isHighlighted: PropTypes.bool.isRequired,
+  handleHighlight: PropTypes.func.isRequired,
+  handleSelect: PropTypes.func.isRequired,
 };
 
 Suggestion.defaultProps = {

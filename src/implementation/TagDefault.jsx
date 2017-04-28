@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { defaultClassNamePrefix } from './util';
 
@@ -6,10 +7,10 @@ export const TagClassNameDefault = `${defaultClassNamePrefix}-tag`;
 
 export class TagDefault extends React.Component {
   static propTypes = {
-    value: React.PropTypes.string.isRequired,
-    handleEdit: React.PropTypes.func.isRequired,
-    handleRemove: React.PropTypes.func.isRequired,
-    TagClassName: React.PropTypes.string,
+    value: PropTypes.string.isRequired,
+    handleEdit: PropTypes.func.isRequired,
+    handleRemove: PropTypes.func.isRequired,
+    TagClassName: PropTypes.string,
   }
 
   static defaultProps = {
