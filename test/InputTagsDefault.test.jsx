@@ -325,7 +325,8 @@ describe('<InputTagsDefault />', () => {
   describe('edit tag', () => {
     context('when there is at least one tag', () => {
       beforeEach(() => {
-        tags = ['edit me'];
+        tags = ['start', 'edit me', 'end'];
+        // tags = ['edit me'];
         handleInsert = sinon.stub();
         handleRemove = sinon.stub();
         getTagValue = sinon.stub();
@@ -334,6 +335,7 @@ describe('<InputTagsDefault />', () => {
 
         inputTagsWrapper = mount(
           <InputTagsDefault
+            value={emptyString}
             tags={tags}
             handleInsert={handleInsert}
             handleRemove={handleRemove}
@@ -346,11 +348,11 @@ describe('<InputTagsDefault />', () => {
 
       describe('start editing tag', () => {
         context('when token is clicked', () => {
-          const editTagIndex = 0;
+          const editTagIndex = 1;
 
           beforeEach(() => {
             getTagValue.returns(tags[editTagIndex]);
-            inputTagsWrapper.find('button').parent().childAt(0).simulate('click');
+            inputTagsWrapper.find('button').at(editTagIndex).parent().childAt(0).simulate('click');
           });
 
           it('should remove the current tag', () => {
@@ -379,6 +381,28 @@ describe('<InputTagsDefault />', () => {
 
           it('should select the text in the input element', () => {
             expect(selectElement).to.have.been.called();
+          });
+        });
+      });
+
+      describe('stop editing tag', () => {
+        context('when input value is empty string and a tag exists after it', () => {
+          const editTagIndex = 1;
+          const inputValue = emptyString;
+
+          beforeEach(() => {
+            inputTagsWrapper.find('button').at(editTagIndex).parent().childAt(0).simulate('click');
+            inputTagsWrapper.find('input').simulate('change', { target: { value: inputValue } });
+          });
+
+          context('when focus leaves input field', () => {
+            beforeEach(() => {
+              inputTagsWrapper.find('input').simulate('blur');
+            });
+
+            it('should move input to end of tags', () => {
+              expect(inputTagsWrapper.state().inputIndex).to.equal(tags.length);
+            });
           });
         });
       });

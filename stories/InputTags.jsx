@@ -159,4 +159,14 @@ storiesOf('InputTags', module)
         suggestions={items}
       />
     )
+  })
+  .add('move input to end by backspacing all content of middle tag and clicking elsewhere', () => {
+    return (
+      <InputTags
+        tags={['start', 'edit me', 'end']}
+        handleInsert={noop}
+        handleRemove={noop}
+        suggestions={items}
+      />
+    )
   });

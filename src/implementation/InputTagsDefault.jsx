@@ -201,6 +201,10 @@ export class InputTagsDefault extends React.Component {
     if (inputValue.length > 0) {
       this.insertTag(tags, inputIndex, createTag(inputValue));
     }
+
+    if (inputValue.length === 0 && inputIndex !== tags.length) {
+      this.setState({ inputIndex: tags.length });
+    }
   }
 
   handleInputOnKeyDown = (event) => {
