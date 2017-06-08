@@ -1,6 +1,8 @@
 # [react-input-tags](https://www.npmjs.com/package/react-input-tags) | [demo](https://baldwmic.github.io/react-input-tags/)
 React component for tagging inputs.
 
+![example](assets/example.gif)
+
 [![npm version](https://badge.fury.io/js/react-input-tags.svg)](https://badge.fury.io/js/react-input-tags)
 ![dependencies](https://david-dm.org/baldwmic/react-input-tags.svg)
 [![travis-ci status](https://travis-ci.org/baldwmic/react-input-tags.png?branch=master)](https://travis-ci.org/baldwmic/react-input-tags)

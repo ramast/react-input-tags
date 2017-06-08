@@ -10,7 +10,7 @@ exports[`create token by typing non empty string and clicking on something else`
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -77,7 +77,7 @@ exports[`create token by typing non empty string and pressing comma`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -116,7 +116,7 @@ exports[`create token by typing non empty string and pressing enter`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -183,7 +183,7 @@ exports[`create token by typing non empty string and pressing tab`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -222,7 +222,7 @@ exports[`delete token by backspacing when input is empty`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -261,7 +261,7 @@ exports[`delete token by clicking delete button`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -300,7 +300,7 @@ exports[`edit token by clicking on tag`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -423,7 +423,7 @@ exports[`move input to end by backspacing all content of middle tag and clicking
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span
@@ -434,7 +434,7 @@ exports[`move input to end by backspacing all content of middle tag and clicking
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span
@@ -445,7 +445,7 @@ exports[`move input to end by backspacing all content of middle tag and clicking
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>

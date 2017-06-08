@@ -1,6 +1,6 @@
 exports[`highlight suggestion by mousing over suggestion`] = `
 <ul
-  className={undefined}>
+  className="react-input-tags-suggestion-list">
   <li
     className="react-input-tags-suggestion highlighted"
     onClick={[Function]}
@@ -27,7 +27,7 @@ exports[`highlight suggestion by mousing over suggestion`] = `
 
 exports[`select suggestion by clicking suggestion`] = `
 <ul
-  className={undefined}>
+  className="react-input-tags-suggestion-list">
   <li
     className="react-input-tags-suggestion highlighted"
     onClick={[Function]}
@@ -54,7 +54,7 @@ exports[`select suggestion by clicking suggestion`] = `
 
 exports[`show highlighted suggestion by rendering`] = `
 <ul
-  className={undefined}>
+  className="react-input-tags-suggestion-list">
   <li
     className="react-input-tags-suggestion highlighted"
     onClick={[Function]}

@@ -1,12 +1,15 @@
 .react-input-tags-input-tags {
-  max-width: 200px;
-  background-color: pink;
+  max-width: 300px;
+  border: 1px dotted lightgray;
+  background-color: white;
 }
 
 .react-input-tags-input {
-  background: transparent;
-  border: 3px solid black;
+  height: 20px;
+  padding: 4px;
+  border: 1px dashed lightgray;
   outline: 0;
+  background: transparent;
   /* input element does * not * inherit font styling by default */
   font-family: inherit;
   font-size: inherit;
@@ -14,32 +17,44 @@
 
 .react-input-tags-tag {
   display: inline-block;
-  background-color: black;
-  color: white;
+  height: 28px;
+  border: 1px solid rgb(102, 72, 151);
+  vertical-align: top;
+  background-color: white;
+  color: black;
 }
 
 .react-input-tags-tag span {
   display: inline-block;
-  max-width: calc(200px - 26px);
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 4px;
+  vertical-align: top;
 }
 
-.react-input-tags-tag textarea {
-  resize: none;
+.react-input-tags-tag button {
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background-color: white;
 }
 
 .react-input-tags-suggestion-list {
-  position: absolute;
+  max-width: 300px;
+  margin-top: inherit;
+  list-style: none;
+  padding-left: 0;
+  background-color: white;
+  box-shadow: 0 6px 16px 0 lightgray;
 }
 
 .react-input-tags-suggestion {
+  display: flex;
+  padding: 4px;
   cursor: pointer;
 }
 
 .react-input-tags-suggestion.highlighted {
-  background-color: lightgray;
-  color: black;
+  background-color: rgb(102, 72, 151);
+  color: white;
 }
 
 .react-input-tags-suggestions-loader {

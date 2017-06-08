@@ -31,7 +31,7 @@ export class TagDefault extends React.Component {
         <button
           onClick={handleRemove}
         >
-          {'x'}
+          {'X'}
         </button>
       </span>
     );
