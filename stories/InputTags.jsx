@@ -80,6 +80,25 @@ storiesOf('InputTags', module)
       />
     )
   })
+  .add('update input width by typing', () => {
+    return (
+      <InputTags
+        tags={[]}
+        handleInsert={noop}
+        handleRemove={noop}
+      />
+    )
+  })
+  .add('update input width with a max setting by typing', () => {
+    return (
+      <InputTags
+        tags={[]}
+        handleInsert={noop}
+        handleRemove={noop}
+        inputMaxWidth={100}
+      />
+    )
+  })
   .add('show suggestions list by typing non empty string', () => {
     return (
       <InputTags
