@@ -17,6 +17,10 @@ export class SuggestionListDefault extends React.Component {
     SuggestionListClassName: PropTypes.string,
   }
 
+  static defaultProps = {
+    SuggestionListClassName: SuggestionListClassNameDefault,
+  }
+
   render() {
     const {
       suggestions,
