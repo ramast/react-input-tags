@@ -468,3 +468,59 @@ exports[`show suggestions list by typing non empty string`] = `
   </div>
 </div>
 `;
+
+exports[`update input width by typing`] = `
+<div
+  className="react-input-tags-input-tags">
+  <div>
+    <span>
+      <span
+        style={
+          Object {
+            "overflow": "scroll",
+            "position": "absolute",
+            "visibility": "hidden",
+            "whiteSpace": "pre",
+          }
+        } />
+      <input
+        className="react-input-tags-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder={undefined}
+        tabIndex={undefined}
+        type="text"
+        value="" />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`update input width with a max setting by typing`] = `
+<div
+  className="react-input-tags-input-tags">
+  <div>
+    <span>
+      <span
+        style={
+          Object {
+            "overflow": "scroll",
+            "position": "absolute",
+            "visibility": "hidden",
+            "whiteSpace": "pre",
+          }
+        } />
+      <input
+        className="react-input-tags-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder={undefined}
+        tabIndex={undefined}
+        type="text"
+        value="" />
+    </span>
+  </div>
+</div>
+`;
