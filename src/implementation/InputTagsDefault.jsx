@@ -171,7 +171,7 @@ export class InputTagsDefault extends React.Component {
   editTag = (tags, editTagIndex) => {
     const { getTagValue } = this.props;
 
-    this.removeTag(tags, editTagIndex);
+    this.removeTag(tags, editTagIndex, true);
     this.setState({
       inputValue: getTagValue(tags[editTagIndex]),
       inputIndex: editTagIndex,
@@ -179,9 +179,15 @@ export class InputTagsDefault extends React.Component {
     });
   }
 
-  removeTag = (tags, removeTagIndex) => {
+  removeTag = (tags, removeTagIndex, inputInUse) => {
     const { handleRemove } = this.props;
 
+    // when input is in use, we do not want the input to jump around
+    // knowing that eventually an insert or blur will move the input back to the end
+    const newInputIndex = (inputInUse) ? removeTagIndex : tags.length - 1;
+    this.setState({
+      inputIndex: newInputIndex,
+    });
     handleRemove(tags, removeTagIndex);
   }
 
@@ -239,8 +245,7 @@ export class InputTagsDefault extends React.Component {
     if (removeKeyCodes.includes(keyCode) && inputValue.length === 0 && tags.length > 0
         && inputIndex > 0) {
       const removeTagIndex = inputIndex - 1;
-      this.removeTag(tags, removeTagIndex);
-      this.setState({ inputIndex: removeTagIndex });
+      this.removeTag(tags, removeTagIndex, true);
     }
 
     if (closeKeyCodes.includes(keyCode)) {
@@ -333,7 +338,7 @@ export class InputTagsDefault extends React.Component {
               key={index}
               value={tag}
               handleEdit={() => this.editTag(tags, index)}
-              handleRemove={() => this.removeTag(tags, index)}
+              handleRemove={() => this.removeTag(tags, index, false)}
               {...otherProps}
             />
           )}
@@ -355,7 +360,7 @@ export class InputTagsDefault extends React.Component {
               key={index + inputIndex}
               value={tag}
               handleEdit={() => this.editTag(tags, index + inputIndex)}
-              handleRemove={() => this.removeTag(tags, index + inputIndex)}
+              handleRemove={() => this.removeTag(tags, index + inputIndex, false)}
               {...otherProps}
             />
           )}

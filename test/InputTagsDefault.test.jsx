@@ -412,7 +412,7 @@ describe('<InputTagsDefault />', () => {
   describe('delete tag', () => {
     context('when there is at least one tag', () => {
       beforeEach(() => {
-        tags = ['delete me'];
+        tags = ['start', 'delete me', 'end'];
         handleRemove = sinon.stub();
 
         inputTagsWrapper = mount(
@@ -425,44 +425,35 @@ describe('<InputTagsDefault />', () => {
       });
 
       context('when `x` button is clicked', () => {
+        const removeTagIndex = 1;
+
         beforeEach(() => {
-          inputTagsWrapper.find('button').simulate('click');
+          inputTagsWrapper.find('button').at(removeTagIndex).simulate('click');
         });
 
         it('should remove token', () => {
-          expect(handleRemove).to.have.been.calledWith(tags, tags.length - 1);
+          expect(handleRemove).to.have.been.calledWith(tags, removeTagIndex);
+        });
+
+        it('should set the state `inputIndex` to the end', () => {
+          expect(inputTagsWrapper.state().inputIndex).to.equal(tags.length - 1);
         });
       });
 
       context('when `backspace` key is pressed', () => {
-        context('when input field has not been changed', () => {
+        context('when input field is empty', () => {
+          const removeTagIndex = 2;
+
           beforeEach(() => {
             inputTagsWrapper.find('input').simulate('keydown', { keyCode: backspaceKeyCode });
           });
 
           it('should remove token', () => {
-            expect(handleRemove).to.have.been.calledWith(tags, tags.length - 1);
+            expect(handleRemove).to.have.been.calledWith(tags, removeTagIndex);
           });
 
-          it('should set the state `inputIndex`', () => {
-            expect(inputTagsWrapper.state().inputIndex).to.equal(tags.length - 1);
-          });
-        });
-
-        context('when input field has been changed to empty string', () => {
-          const inputValue = emptyString;
-
-          beforeEach(() => {
-            inputTagsWrapper.find('input').simulate('change', { target: { value: inputValue } });
-            inputTagsWrapper.find('input').simulate('keydown', { keyCode: backspaceKeyCode });
-          });
-
-          it('should remove token', () => {
-            expect(handleRemove).to.have.been.calledWith(tags, tags.length - 1);
-          });
-
-          it('should set the state `inputIndex`', () => {
-            expect(inputTagsWrapper.state().inputIndex).to.equal(tags.length - 1);
+          it('should set the state `inputIndex` to where tag was', () => {
+            expect(inputTagsWrapper.state().inputIndex).to.equal(removeTagIndex);
           });
         });
 
@@ -476,6 +467,24 @@ describe('<InputTagsDefault />', () => {
 
           it('should *not* remove token', () => {
             expect(handleRemove).to.not.have.been.called();
+          });
+        });
+
+        context('when input field is empty and has tag before and after it', () => {
+          const removeTagIndex = 1;
+
+          beforeEach(() => {
+            inputTagsWrapper.find('button').at(removeTagIndex).parent().childAt(0).simulate('click');
+            inputTagsWrapper.find('input').simulate('change', { target: { value: emptyString } });
+            inputTagsWrapper.find('input').simulate('keydown', { keyCode: backspaceKeyCode });
+          });
+
+          it('should remove token', () => {
+            expect(handleRemove).to.have.been.called();
+          });
+
+          it('should set state `inputIndex` to tag before since removed that tag', () => {
+            expect(inputTagsWrapper.state().inputIndex).to.equal(removeTagIndex - 1);
           });
         });
       });
