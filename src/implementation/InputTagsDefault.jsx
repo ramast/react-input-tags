@@ -252,6 +252,8 @@ export class InputTagsDefault extends React.Component {
     }
 
     if (previousKeyCodes.includes(keyCode)) {
+      // prevents typing up from moving cursor to beginning of input
+      event.preventDefault();
       const newHighlightedIndex = calcPreviousIndex(oldHighlightedIndex, numSuggestions);
       this.setHighlightedSuggestionIndex(newHighlightedIndex);
     }
