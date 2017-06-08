@@ -7,7 +7,7 @@ exports[`edit item by clicking text`] = `
   </span>
   <button
     onClick={[Function]}>
-    x
+    X
   </button>
 </span>
 `;
@@ -21,7 +21,7 @@ exports[`remove item by clicking button`] = `
   </span>
   <button
     onClick={[Function]}>
-    x
+    X
   </button>
 </span>
 `;

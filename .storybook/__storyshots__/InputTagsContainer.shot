@@ -40,7 +40,7 @@ exports[`show tags by rendering`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span
@@ -51,7 +51,7 @@ exports[`show tags by rendering`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span
@@ -62,7 +62,7 @@ exports[`show tags by rendering`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
@@ -129,7 +129,7 @@ exports[`update tags by creating, editing and deleting`] = `
       </span>
       <button
         onClick={[Function]}>
-        x
+        X
       </button>
     </span>
     <span>
