@@ -29,7 +29,7 @@ export class TagDefault extends React.Component {
           {value}
         </span>
         <button
-          onClick={handleRemove}
+          onClick={handleRemove} type="button"
         >
           {'X'}
         </button>
